@@ -112,9 +112,8 @@ body {
         font-family: $primary-font;
         font-weight: 400;
         
+        border: 1px solid $desaturated-red;
         border-radius: 30px;
-        border-width: 1px;
-        border-color: $desaturated-red;
         outline-width: 0;
         color: black;
         padding-left: 20px;
@@ -161,9 +160,8 @@ body {
         right: 0;
         height: 100%;
         width: 100px;
+        border: 1px solid hsl(0, 80%, 86%);
         border-radius: 30px;
-        border-width: 1px;
-        border-color: #CE9797;
         background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
         cursor: pointer;
         

@@ -122,9 +122,8 @@ body {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+  border: 1px solid #ce9797;
   border-radius: 30px;
-  border-width: 1px;
-  border-color: #ce9797;
   outline-width: 0;
   color: black;
   padding-left: 20px;
@@ -193,9 +192,8 @@ body {
   right: 0;
   height: 100%;
   width: 100px;
+  border: 1px solid #f8bfbf;
   border-radius: 30px;
-  border-width: 1px;
-  border-color: #CE9797;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   cursor: pointer;
 }
