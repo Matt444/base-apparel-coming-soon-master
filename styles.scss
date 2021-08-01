@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+$dark-grayish-red: hsl(0, 6%, 24%);
+$primary-font: 'Josefin Sans', sans-serif;
+$medium-breakpoint: 768px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: $desaturated-red;
+}
+
+.break {
+            
+    flex-basis: 100%;;
+    width: 0;
+}
+
+.hero {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+
+    @media (max-width: $medium-breakpoint) {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 15%;
+        top: 60px;
+
+        @media (max-width: $medium-breakpoint) {
+            top: 30px;
+            left: 10%;
+            height: 20px;
+        }
+    }
+
+    &__content {
+        padding: 200px 15%;
+        width: 65%;
+        background: url(images/bg-pattern-desktop.svg);
+
+        @media (max-width: $medium-breakpoint) {
+            width: 100%;
+            padding: 70px 10%;
+            text-align: center;
+            background: none;
+        }
+    }
+
+    &__title {
+        font-size: 60px;
+        font-weight: 400;
+        color: $dark-grayish-red;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+        margin-bottom: .3em;
+
+        @media (max-width: $medium-breakpoint) {
+            font-size: 40px;
+        }
+    }
+
+    &__highlight {
+        font-weight: 300;
+        color: $desaturated-red
+    }
+
+    &__description {
+        color: $desaturated-red;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 1.5em;
+    }
+
+    &__email {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        font-family: $primary-font;
+        font-weight: 400;
+        
+        border-radius: 30px;
+        border-width: 1px;
+        border-color: $desaturated-red;
+        outline-width: 0;
+        color: black;
+        padding-left: 20px;
+        margin-bottom: 10px;
+
+        &:focus:invalid {
+            border-color: $soft-red;
+
+            ~.hero__input_label, ~.hero__input_icon {
+                opacity: 1;
+            }
+        }
+
+        &_label {
+            opacity: 0;
+            transition: all .5s;
+            padding-left: 20px;
+            color: $soft-red;
+        }
+
+        &_icon {
+            opacity: 0;
+            transition: all .5s;
+            position: absolute;
+            right: 120px;
+            height: 20px;
+            width: 20px;
+            margin-top: 15px;
+
+            @media (max-width: $medium-breakpoint) {
+                right: 80px;
+            }
+        }
+
+        &::placeholder {
+            color: $desaturated-red;
+            font-family: $primary-font;
+            font-weight: 300;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 100px;
+        border-radius: 30px;
+        border-width: 1px;
+        border-color: #CE9797;
+        background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        cursor: pointer;
+        
+        &:hover {
+            background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%))
+        }
+
+        @media (max-width: $medium-breakpoint) {
+            width: 70px;
+        }
+    }
+
+    &__img {
+        background-image: url(images/hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 35%;
+
+        @media (max-width: $medium-breakpoint) {
+            background-image: url(images/hero-mobile.jpg);
+            width: 100%;
+            height: 200px;
+            margin-top: 80px;
+        }
+    }
+}

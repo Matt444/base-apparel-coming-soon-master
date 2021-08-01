@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #ce9797;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 0;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: auto;
+  }
+}
+
+.hero__logo {
+  position: absolute;
+  left: 15%;
+  top: 60px;
+}
+
+@media (max-width: 768px) {
+  .hero__logo {
+    top: 30px;
+    left: 10%;
+    height: 20px;
+  }
+}
+
+.hero__content {
+  padding: 200px 15%;
+  width: 65%;
+  background: url(images/bg-pattern-desktop.svg);
+}
+
+@media (max-width: 768px) {
+  .hero__content {
+    width: 100%;
+    padding: 70px 10%;
+    text-align: center;
+    background: none;
+  }
+}
+
+.hero__title {
+  font-size: 60px;
+  font-weight: 400;
+  color: #413a3a;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-bottom: .3em;
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 40px;
+  }
+}
+
+.hero__highlight {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.hero__description {
+  color: #ce9797;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+.hero__email {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero__input {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  border-radius: 30px;
+  border-width: 1px;
+  border-color: #ce9797;
+  outline-width: 0;
+  color: black;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.hero__input:focus:invalid {
+  border-color: #f96262;
+}
+
+.hero__input:focus:invalid ~ .hero__input_label, .hero__input:focus:invalid ~ .hero__input_icon {
+  opacity: 1;
+}
+
+.hero__input_label {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  padding-left: 20px;
+  color: #f96262;
+}
+
+.hero__input_icon {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  position: absolute;
+  right: 120px;
+  height: 20px;
+  width: 20px;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .hero__input_icon {
+    right: 80px;
+  }
+}
+
+.hero__input::-webkit-input-placeholder {
+  color: #ce9797;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.hero__input:-ms-input-placeholder {
+  color: #ce9797;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.hero__input::-ms-input-placeholder {
+  color: #ce9797;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.hero__input::placeholder {
+  color: #ce9797;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.hero__button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100px;
+  border-radius: 30px;
+  border-width: 1px;
+  border-color: #CE9797;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  cursor: pointer;
+}
+
+.hero__button:hover {
+  background: linear-gradient(135deg, #f8bfbf, #f8bfbf);
+}
+
+@media (max-width: 768px) {
+  .hero__button {
+    width: 70px;
+  }
+}
+
+.hero__img {
+  background-image: url(images/hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 35%;
+}
+
+@media (max-width: 768px) {
+  .hero__img {
+    background-image: url(images/hero-mobile.jpg);
+    width: 100%;
+    height: 200px;
+    margin-top: 80px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
